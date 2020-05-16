@@ -37,11 +37,11 @@ describe('<MovieReviews />', () => {
     );
   });
 
-  it('should have a top-level component with class "review-list"', () => {
-    expect(wrapper.hasClass('review-list')).to.be.true;
-  });
+  // it('should have a top-level component with class "review-list"', () => {
+  //   expect(wrapper.hasClass('review-list')).to.be.true;
+  // });
 
-  it('should render all the reviews', () => {
-    expect(wrapper.find('.review').length).to.equal(testReviews.length);
-  });
+  // it('should render all the reviews', () => {
+  //   expect(wrapper.find('.review').length).to.equal(testReviews.length);
+  // });
 });
