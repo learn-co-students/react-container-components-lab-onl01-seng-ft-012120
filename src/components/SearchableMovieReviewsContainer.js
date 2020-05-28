@@ -20,7 +20,9 @@ export default class SearchableMovieReviewsContainer extends Component{
         })
     }
 
-    handleSubmit = () =>{
+    handleSubmit = (event) =>{
+        event.preventDefault()
+        console.log(this.state.searchTerm)
         this.fetchMovies()       
     }
 
@@ -37,9 +39,9 @@ export default class SearchableMovieReviewsContainer extends Component{
     }
 
     fetchMovies = () =>{
-        fetch(`${URL}&query${this.state.searchTerm}`)
+        fetch(`${URL}&query=${this.state.searchTerm}`)
         .then(resp => resp.json())
-        .then(data => this.setState({reviews: data}))
+        .then(data => this.setState({reviews: data.results}))
     }
 
 }
